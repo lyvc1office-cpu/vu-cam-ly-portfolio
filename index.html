@@ -1,0 +1,1008 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Portfolio truyền thông công nghệ của Vũ Cẩm Ly — Branding, Content, PR & Media, Event, Integrated Communications.">
+<title>Vũ Cẩm Ly — Portfolio Truyền thông</title>
+<style>
+:root {
+  --bg:#F7F7F5;
+  --surface:#FFFFFF;
+  --text:#151A20;
+  --muted:#68717D;
+  --navy:#17263C;
+  --charcoal:#343B45;
+  --accent:#315F8C;
+  --accent-soft:#E9EFF5;
+  --border:#DDE2E7;
+  --container:1280px;
+  --radius:14px;
+  --shadow:0 12px 38px rgba(23,38,60,.08);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%;width:100%;height:auto}
+button,a{-webkit-tap-highlight-color:transparent}
+:focus-visible{outline:3px solid rgba(49,95,140,.35);outline-offset:4px;border-radius:4px}
+.container{width:min(calc(100% - 48px),var(--container));margin:0 auto}
+.section{padding:108px 0;border-top:1px solid var(--border)}
+.section:first-of-type{border-top:0}
+.eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:750;color:var(--accent);margin:0 0 18px}
+.h1{font-size:clamp(44px,6.6vw,88px);line-height:.98;letter-spacing:-.045em;margin:0;font-weight:760}
+.h2{font-size:clamp(34px,4.5vw,58px);line-height:1.08;letter-spacing:-.035em;margin:0;font-weight:730}
+.h3{font-size:clamp(23px,2.2vw,32px);line-height:1.2;letter-spacing:-.02em;margin:0}
+.lead{font-size:clamp(18px,1.5vw,22px);line-height:1.65;color:var(--charcoal);max-width:850px}
+.small{font-size:14px;color:var(--muted)}
+.muted{color:var(--muted)}
+.rule{border:0;border-top:1px solid var(--border);margin:30px 0}
+.section-header{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,.7fr);gap:56px;align-items:end;margin-bottom:56px}
+.section-header.single{grid-template-columns:1fr}
+.quote{font-size:clamp(20px,2.2vw,30px);line-height:1.45;letter-spacing:-.015em;border-left:2px solid var(--accent);padding-left:24px;margin:0;color:var(--navy)}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 18px;border:1px solid var(--navy);font-weight:700;font-size:14px;letter-spacing:.01em;transition:.2s ease}
+.btn.primary{background:var(--navy);color:white}
+.btn:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(23,38,60,.1)}
+
+/* Header */
+.site-header{position:sticky;top:0;z-index:100;background:rgba(247,247,245,.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(221,226,231,.85)}
+.nav-wrap{height:70px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{font-weight:800;letter-spacing:.04em;font-size:15px;white-space:nowrap}
+.nav{display:flex;align-items:center;gap:26px;font-size:13px;color:#434C57}
+.nav a{position:relative;padding:8px 0}
+.nav a::after{content:"";position:absolute;left:0;right:100%;bottom:2px;height:1px;background:var(--accent);transition:.2s}
+.nav a:hover::after,.nav a.active::after{right:0}
+.nav .download{padding:9px 14px;border:1px solid var(--navy);color:var(--navy)}
+.nav .download::after{display:none}
+.menu-btn{display:none;background:none;border:0;font-size:24px;padding:8px}
+
+/* Hero */
+.hero{padding:72px 0 96px;min-height:calc(100vh - 70px);display:flex;align-items:center}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(360px,.85fr);gap:72px;align-items:center}
+.hero-title{margin-top:10px}
+.hero-role{font-size:16px;letter-spacing:.14em;font-weight:800;margin:22px 0 4px;color:var(--navy)}
+.hero-sub{font-size:17px;color:var(--accent);font-weight:650;margin:0 0 28px}
+.hero-quote{max-width:740px;margin:34px 0 26px;font-size:clamp(20px,2vw,28px);line-height:1.46;color:var(--navy);font-weight:550;letter-spacing:-.01em}
+.hero-intro{max-width:730px;font-size:18px;color:#3B434D}
+.hero-meta{display:flex;gap:18px 30px;flex-wrap:wrap;margin-top:28px;font-size:14px}
+.hero-meta strong{font-weight:750}
+.hero-photo{position:relative;max-width:456px;margin-left:auto;padding:0 18px 18px 0}
+.hero-photo::before{content:"";position:absolute;top:18px;left:18px;right:0;bottom:0;border:1px solid var(--border);z-index:-1}
+.hero-photo img{aspect-ratio:1/1;object-fit:cover;object-position:center;position:relative;z-index:1;background:#fff}
+.photo-caption{margin-top:12px;font-size:12px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;padding-left:2px}
+
+/* Highlights */
+.highlights{background:#fff}
+.metrics-top{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.metric-hero{padding:34px 40px 36px 0}
+.metric-hero+ .metric-hero{border-left:1px solid var(--border);padding-left:40px}
+.metric-num{font-size:clamp(50px,6vw,88px);line-height:.9;letter-spacing:-.052em;font-weight:800;color:var(--navy)}
+.metric-label{font-size:18px;font-weight:700;margin-top:16px;max-width:440px}
+.metric-note{font-size:14px;color:var(--muted);margin-top:9px;max-width:520px}
+.metric-up{font-size:14px;color:var(--accent);font-weight:700;margin-top:9px}
+.metrics-bottom{display:grid;grid-template-columns:repeat(3,1fr)}
+.metric-small{padding:28px 26px 16px 0;min-height:188px}
+.metric-small+.metric-small{border-left:1px solid var(--border);padding-left:26px}
+.metric-small .metric-num{font-size:clamp(38px,3.8vw,56px)}
+.metric-small .metric-label{font-size:16px}
+.metric-list{font-size:12px;color:var(--muted);line-height:1.75;margin-top:10px}
+.media-logo-marquee{margin-top:26px;border-top:1px solid var(--border);border-bottom:1px solid var(--border);overflow:hidden;position:relative;mask-image:linear-gradient(to right,transparent 0,#000 5%,#000 95%,transparent 100%);-webkit-mask-image:linear-gradient(to right,transparent 0,#000 5%,#000 95%,transparent 100%)}
+.media-logo-track{display:flex;width:max-content;animation:mediaLogoRoll 28s linear infinite;will-change:transform}
+.media-logo-set{display:flex;align-items:center;gap:58px;padding:24px 29px 24px 0;flex:none}
+.media-logo{height:42px;width:auto;max-width:160px;object-fit:contain;display:block;filter:none;opacity:.96}
+.media-logo.logo-wide{height:34px;max-width:185px}
+.media-logo-marquee:hover .media-logo-track{animation-play-state:paused}
+@keyframes mediaLogoRoll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+
+/* Capabilities */
+.capabilities{background:#F0F2F4}
+.editorial-list{border-top:1px solid #CAD1D8}
+.editorial-row{display:grid;grid-template-columns:70px minmax(220px,.75fr) minmax(0,1.3fr);gap:28px;padding:26px 0;border-bottom:1px solid #CAD1D8;align-items:start}
+.editorial-row .num{font-size:13px;color:var(--accent);font-weight:800;letter-spacing:.08em}
+.editorial-row h3{font-size:21px;margin:0;line-height:1.3}
+.editorial-row p{margin:0;color:#4B5560}
+.process-line{display:grid;grid-template-columns:repeat(5,1fr);margin-top:42px;border-top:1px solid var(--navy)}
+.process-step{position:relative;padding:18px 10px 0 0;font-size:13px;font-weight:700;color:var(--navy)}
+.process-step::before{content:"";position:absolute;top:-4px;left:0;width:7px;height:7px;background:var(--navy);border-radius:50%}
+.process-step:not(:last-child)::after{content:"→";position:absolute;right:16px;color:#9CA6B2}
+
+/* Current role */
+.current-role{background:#fff}
+.role-grid{display:grid;grid-template-columns:minmax(360px,.8fr) minmax(0,1.2fr);gap:72px;align-items:start}
+.role-image img{width:100%;height:auto;object-fit:contain}
+.role-image .caption{margin-top:12px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.role-topline{display:flex;justify-content:space-between;gap:24px;align-items:flex-start;border-bottom:1px solid var(--border);padding-bottom:28px;margin-bottom:18px}
+.role-meta{font-size:14px;font-weight:700;color:var(--accent);margin-top:12px}
+.team-proof{flex:0 0 140px;border-left:1px solid var(--border);padding-left:20px}
+.team-proof strong{display:block;font-size:42px;line-height:1;color:var(--navy)}
+.team-proof span{display:block;font-size:12px;color:var(--muted);margin-top:8px}
+.role-items{border-top:1px solid var(--border);margin-top:30px}
+.role-item{display:grid;grid-template-columns:48px 1fr;gap:18px;padding:20px 0;border-bottom:1px solid var(--border)}
+.role-item b{color:var(--accent);font-size:13px}
+.role-item h3{font-size:18px;margin:0 0 6px}
+.role-item p{margin:0;color:#4F5862}
+.role-closing{margin-top:28px;font-size:20px;line-height:1.5;color:var(--navy);font-weight:650}
+
+/* Project */
+.project{background:var(--navy);color:#F5F7FA;border-top:0}
+.project .eyebrow{color:#B8C9DA}
+.project .muted,.project .small{color:#B9C3CF}
+.project-head{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(300px,.8fr);gap:56px;align-items:end;margin-bottom:48px}
+.project-kicker{font-size:15px;letter-spacing:.08em;text-transform:uppercase;color:#B8C9DA;margin-bottom:12px}
+.project-role{border-left:2px solid #89A7C5;padding-left:22px;color:#DFE8F1}
+.project-hero-image{margin:38px 0 56px}
+.project-hero-image img{width:100%;height:auto;object-fit:contain;background:#0f1b2b}
+.project-core{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:60px;align-items:start}
+.project-copy-block{display:grid;grid-template-columns:150px 1fr;gap:24px;padding:20px 0;border-top:1px solid rgba(255,255,255,.18)}
+.project-copy-block:last-child{border-bottom:1px solid rgba(255,255,255,.18)}
+.project-copy-block .label{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#B8C9DA}
+.project-copy-block p{margin:0;color:#E2E8EF}
+.project-support img{width:100%;height:auto;object-fit:contain;background:#fff}
+.project-results{margin-top:64px;border-top:1px solid rgba(255,255,255,.22);padding-top:42px}
+.project-results-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0}
+.project-result{padding:0 22px 0 0}
+.project-result+.project-result{border-left:1px solid rgba(255,255,255,.18);padding-left:22px}
+.project-result strong{display:block;font-size:clamp(34px,3.6vw,54px);line-height:1;letter-spacing:-.04em}
+.project-result span{display:block;font-size:13px;color:#C8D2DC;margin-top:10px;line-height:1.5}
+.project-result em{display:block;font-size:12px;color:#AFC5D9;margin-top:8px;font-style:normal;font-weight:700}
+
+/* Webinar */
+.webinars{background:#fff}
+.webinar-flow{display:grid;grid-template-columns:repeat(6,1fr);border-top:1px solid var(--navy);margin:34px 0 54px}
+.webinar-flow div{padding:18px 18px 0 0;position:relative;font-size:12px;font-weight:750;color:var(--navy)}
+.webinar-flow div::before{content:"";position:absolute;top:-4px;left:0;width:7px;height:7px;border-radius:50%;background:var(--navy)}
+.webinar-flow div:not(:last-child)::after{content:"→";position:absolute;right:12px;color:#A0AAB5}
+.webinar-compare{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.webinar-panel{padding:34px 34px 38px 0}
+.webinar-panel+.webinar-panel{border-left:1px solid var(--border);padding-left:34px}
+.webinar-panel h3{font-size:20px;margin:0 0 24px;color:var(--navy)}
+.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px 28px}
+.stat strong{font-size:38px;line-height:1;color:var(--navy);display:block;letter-spacing:-.04em}
+.stat span{font-size:13px;color:var(--muted);display:block;margin-top:7px}
+.webinar-role{font-size:17px;max-width:970px;color:#46505A}
+.webinar-close{font-size:clamp(24px,2.8vw,36px);line-height:1.3;color:var(--navy);font-weight:650;letter-spacing:-.02em;margin:52px 0 0;max-width:980px}
+
+/* Media */
+.media{background:#EEF0F2}
+.media-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:70px;align-items:start}
+.media-list{border-top:0}
+.media-item{padding:18px 0;border-bottom:1px solid #C9D0D7}
+.media-item h3{font-size:18px;margin:0 0 6px}
+.media-item p{margin:0;color:#4E5761}
+.media-proof{position:sticky;top:100px}
+.media-num{font-size:clamp(64px,8vw,108px);font-weight:800;line-height:.88;color:var(--navy);letter-spacing:-.055em}
+.media-names{font-size:14px;line-height:2;color:#4B5560;margin-top:20px}
+.media-journey{margin-top:44px;border-top:1px solid #BBC4CD;display:flex;flex-wrap:wrap;gap:0}
+.media-journey span{padding:15px 24px 15px 0;font-size:12px;font-weight:700;position:relative;color:var(--navy)}
+.media-journey span:not(:last-child)::after{content:"→";margin-left:24px;color:#8A96A3}
+.evidence-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:32px}
+.placeholder{border:1px dashed #AEB8C2;min-height:116px;display:flex;align-items:center;justify-content:center;text-align:center;font-size:11px;letter-spacing:.12em;color:#7B8793;background:rgba(255,255,255,.45)}
+
+/* Journey */
+.journey{background:#fff}
+.timeline{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:44px;margin-top:62px}
+.timeline::before{content:"";position:absolute;left:0;right:0;top:8px;height:1px;background:var(--border)}
+.timeline-item{padding-top:32px;position:relative}
+.timeline-item::before{content:"";position:absolute;top:3px;left:0;width:11px;height:11px;background:#fff;border:2px solid var(--accent);border-radius:50%}
+.timeline-item .company{font-size:12px;letter-spacing:.13em;color:var(--accent);font-weight:800}
+.timeline-item .role{font-size:14px;color:var(--muted);margin:7px 0 18px}
+.timeline-item h3{font-size:22px;margin:0 0 12px}
+.timeline-item p{color:#4B5560;margin:0 0 16px}
+.timeline-item .skills{font-size:12px;color:var(--muted);line-height:1.8}
+.journey-close{margin-top:46px;font-size:18px;font-weight:750;color:var(--navy);letter-spacing:.01em}
+
+/* Experience */
+.experience{background:#F0F2F4}
+.experience-grid{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid #C9D0D7;border-bottom:1px solid #C9D0D7}
+.experience-col{padding:38px 42px 42px 0}
+.experience-col+.experience-col{border-left:1px solid #C9D0D7;padding-left:42px}
+.experience-col .company{font-size:12px;color:var(--accent);font-weight:800;letter-spacing:.14em}
+.experience-col .role{font-size:13px;color:var(--muted);margin:6px 0 18px}
+.experience-col h3{font-size:22px;margin:0 0 10px}
+.experience-col .desc{color:#4F5862;margin-bottom:28px}
+.exp-stats{display:grid;grid-template-columns:1fr 1fr;gap:26px 18px;border-top:1px solid #C9D0D7;padding-top:24px}
+.exp-stat strong{font-size:34px;color:var(--navy);display:block;line-height:1;letter-spacing:-.04em}
+.exp-stat span{font-size:12px;color:var(--muted);display:block;margin-top:8px}
+.exp-meta{font-size:12px;color:#5B6570;line-height:1.8;margin-top:24px}
+
+/* RAR insight */
+.rar-insight{background:#EAF0F5}
+.insight-board{display:grid;grid-template-columns:1fr 110px 1fr;gap:28px;align-items:center;margin-top:58px}
+.cluster{border-top:1px solid #BFCBD6;padding-top:24px}
+.cluster-title{font-size:12px;letter-spacing:.12em;color:var(--accent);font-weight:800;text-transform:uppercase;margin-bottom:16px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1px solid #B8C5D0;padding:7px 10px;font-size:12px;background:rgba(255,255,255,.35);color:#34475B}
+.insight-arrow{text-align:center;font-size:30px;color:#72879B}
+.insight-observation{max-width:1050px;margin:60px auto 0;text-align:center;font-size:clamp(22px,2.2vw,31px);line-height:1.45;color:var(--navy);font-weight:600;letter-spacing:-.015em}
+.problem{margin-top:62px;padding-top:46px;border-top:1px solid #BFCBD6}
+.problem .anchor{font-size:clamp(40px,5vw,72px);line-height:1.05;letter-spacing:-.045em;font-weight:780;color:var(--navy);max-width:920px}
+.questions{display:grid;grid-template-columns:repeat(4,1fr);margin-top:36px;border-top:1px solid #BFCBD6}
+.question{padding:18px 24px 0 0;font-size:14px;font-weight:700;color:#384C60}
+.question+.question{border-left:1px solid #BFCBD6;padding-left:24px}
+.insight-close{margin-top:56px;font-size:clamp(24px,2.8vw,40px);line-height:1.25;color:var(--navy);font-weight:690;max-width:900px}
+
+/* Directions */
+.directions{background:#fff}
+.direction-grid{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.direction{display:grid;grid-template-columns:52px 1fr;gap:18px;padding:34px 38px 34px 0}
+.direction:nth-child(2),.direction:nth-child(4){border-left:1px solid var(--border);padding-left:38px}
+.direction:nth-child(3),.direction:nth-child(4){border-top:1px solid var(--border)}
+.direction .num{font-size:13px;font-weight:800;color:var(--accent)}
+.direction h3{font-size:21px;margin:0 0 8px}
+.direction p{margin:0;color:#4E5761}
+.direction .example{margin-top:9px;color:var(--navy);font-weight:650}
+
+/* Contact */
+.contact{background:var(--navy);color:#F5F7FA;border-top:0;padding:100px 0 44px}
+.contact .eyebrow{color:#B7C9DA}
+.contact-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:90px;align-items:end}
+.contact-copy{max-width:760px;color:#D8E0E8;font-size:18px}
+.contact-info{border-left:1px solid rgba(255,255,255,.2);padding-left:32px}
+.contact-info h3{margin:0 0 6px;font-size:24px}
+.contact-info p{margin:7px 0;color:#C8D2DC}
+.contact .btn{border-color:#DCE5ED;color:#F8FBFD}
+.contact .btn.primary{background:#F4F7FA;color:var(--navy);border-color:#F4F7FA}
+.contact-signature{margin-top:68px;padding-top:26px;border-top:1px solid rgba(255,255,255,.18);font-size:clamp(18px,2vw,26px);color:#DDE6EF;max-width:980px}
+.footer-note{margin-top:34px;font-size:11px;color:#93A4B5;letter-spacing:.06em}
+
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .55s ease,transform .55s ease}
+.reveal.visible{opacity:1;transform:none}
+
+@media (max-width: 980px){
+  .container{width:min(calc(100% - 36px),var(--container))}
+  .section{padding:84px 0}
+  .nav{position:fixed;inset:70px 0 auto 0;background:var(--bg);border-bottom:1px solid var(--border);display:none;flex-direction:column;align-items:flex-start;padding:22px 24px;gap:10px}
+  .nav.open{display:flex}
+  .menu-btn{display:block}
+  .hero{min-height:auto;padding-top:56px}
+  .hero-grid,.section-header,.role-grid,.project-head,.project-core,.media-grid,.contact-grid{grid-template-columns:1fr}
+  .hero-photo{max-width:580px}
+  .hero-photo{padding:0;max-width:580px}
+  .hero-photo::before{display:none}
+  .metrics-top,.webinar-compare,.experience-grid,.direction-grid{grid-template-columns:1fr}
+  .metric-hero+ .metric-hero,.webinar-panel+.webinar-panel,.experience-col+.experience-col,.direction:nth-child(2),.direction:nth-child(4){border-left:0;padding-left:0}
+  .metric-hero+.metric-hero,.webinar-panel+.webinar-panel,.experience-col+.experience-col{border-top:1px solid var(--border)}
+  .metrics-bottom{grid-template-columns:1fr 1fr}
+  .metric-small:nth-child(3){border-left:0;border-top:1px solid var(--border);grid-column:1/-1}
+  .editorial-row{grid-template-columns:46px 1fr}
+  .editorial-row p{grid-column:2}
+  .process-line{grid-template-columns:1fr}
+  .process-step{padding:12px 0 12px 20px;border-left:1px solid var(--navy);border-top:0}
+  .process-step::before{top:20px;left:-4px}
+  .process-step:not(:last-child)::after{display:none}
+  .role-grid{gap:44px}
+  .role-image{max-width:720px}
+  .project-results-grid{grid-template-columns:1fr 1fr}
+  .project-result{padding:18px 18px 18px 0}
+  .project-result+.project-result{border-left:0;padding-left:0}
+  .project-result:nth-child(even){border-left:1px solid rgba(255,255,255,.18);padding-left:18px}
+  .project-result:nth-child(n+3){border-top:1px solid rgba(255,255,255,.18)}
+  .webinar-flow{grid-template-columns:repeat(3,1fr);row-gap:24px}
+  .timeline{grid-template-columns:1fr}
+  .timeline::before{top:0;bottom:0;left:5px;right:auto;width:1px;height:auto}
+  .timeline-item{padding:0 0 36px 32px}
+  .timeline-item::before{top:3px;left:0}
+  .media-proof{position:static}
+  .insight-board{grid-template-columns:1fr}
+  .insight-arrow{transform:rotate(90deg)}
+  .questions{grid-template-columns:1fr 1fr}
+  .question:nth-child(3){border-left:0;border-top:1px solid #BFCBD6;padding-left:0;padding-top:18px}
+  .question:nth-child(4){border-top:1px solid #BFCBD6;padding-top:18px}
+}
+
+@media (max-width: 640px){
+  .container{width:min(calc(100% - 28px),var(--container))}
+  .section{padding:68px 0}
+  .h1{font-size:48px}
+  .h2{font-size:36px}
+  .hero-grid{gap:42px}
+  .hero-meta{display:block}
+  .hero-meta span{display:block;margin-top:8px}
+  .hero-photo img{aspect-ratio:auto;object-fit:contain}
+  .metrics-bottom{grid-template-columns:1fr}
+  .metric-small,.metric-small+.metric-small,.metric-small:nth-child(3){border-left:0;border-top:1px solid var(--border);padding-left:0;grid-column:auto}
+  .editorial-row{grid-template-columns:38px 1fr;gap:12px}
+  .role-topline{display:block}
+  .team-proof{border-left:0;border-top:1px solid var(--border);padding:18px 0 0;margin-top:22px}
+  .project-copy-block{grid-template-columns:1fr;gap:8px}
+  .project-results-grid{grid-template-columns:1fr}
+  .project-result,.project-result:nth-child(even){border-left:0!important;border-top:1px solid rgba(255,255,255,.18);padding:18px 0!important}
+  .webinar-flow{grid-template-columns:1fr 1fr}
+  .stat-grid{grid-template-columns:1fr 1fr}
+  .evidence-row{grid-template-columns:1fr}
+  .experience-col,.experience-col+.experience-col{padding:30px 0}
+  .direction,.direction:nth-child(2),.direction:nth-child(4){grid-template-columns:40px 1fr;padding:26px 0;border-left:0}
+  .direction:nth-child(n+2){border-top:1px solid var(--border)}
+  .questions{grid-template-columns:1fr}
+  .question,.question+.question,.question:nth-child(3),.question:nth-child(4){border-left:0;border-top:1px solid #BFCBD6;padding:15px 0}
+  .contact-info{border-left:0;border-top:1px solid rgba(255,255,255,.2);padding:26px 0 0}
+  .btns{flex-direction:column;align-items:stretch}
+  .btn{width:100%}
+}
+
+@media (prefers-reduced-motion: reduce){
+  .media-logo-track{animation:none;flex-wrap:wrap;width:100%}
+  .media-logo-set[aria-hidden="true"]{display:none}
+  *{scroll-behavior:auto!important;transition:none!important;animation:none!important}
+  .reveal{opacity:1;transform:none}
+}
+
+
+/* ===== V3 ART DIRECTION OVERRIDES ===== */
+.section{padding:92px 0}
+.h2{font-size:clamp(32px,3.7vw,50px);line-height:1.1;letter-spacing:-.032em;font-weight:730}
+.h3{font-size:clamp(21px,2vw,29px)}
+.lead{font-size:clamp(17px,1.35vw,20px);line-height:1.62}
+.section-header{gap:52px;margin-bottom:44px;align-items:start}
+.metric-num{font-size:clamp(46px,5.2vw,74px)}
+.metric-small .metric-num{font-size:clamp(34px,3.2vw,48px)}
+.metric-hero{padding-top:30px;padding-bottom:32px}
+.metric-small{min-height:166px;padding-top:24px}
+.media-logo-marquee{margin-top:22px}
+.media-logo-set{padding-top:20px;padding-bottom:20px}
+
+/* Current role — overview first, scope full-width beneath */
+.role-overview{display:grid;grid-template-columns:minmax(340px,.78fr) minmax(0,1.22fr);gap:64px;align-items:center}
+.role-image img{width:100%;height:auto;object-fit:contain}
+.role-image .caption{margin-top:11px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.role-summary .h2{max-width:760px}
+.role-meta-row{display:flex;align-items:center;gap:22px;flex-wrap:wrap;margin-top:16px}
+.role-meta{font-size:13px;font-weight:750;color:var(--accent);margin:0}
+.team-proof-inline{display:flex;align-items:baseline;gap:9px;border-left:1px solid var(--border);padding-left:20px;color:var(--navy)}
+.team-proof-inline strong{font-size:28px;line-height:1;font-weight:800;letter-spacing:-.04em}
+.team-proof-inline span{font-size:12px;color:var(--muted)}
+.role-summary .lead{margin-top:30px;max-width:820px}
+.role-scope-grid{display:grid;grid-template-columns:1fr 1fr;margin-top:50px;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.role-scope-item{display:grid;grid-template-columns:44px 1fr;gap:16px;padding:27px 30px 27px 0}
+.role-scope-item:nth-child(even){border-left:1px solid var(--border);padding-left:30px}
+.role-scope-item:nth-child(n+3){border-top:1px solid var(--border)}
+.role-scope-item .num{font-size:12px;font-weight:800;color:var(--accent);letter-spacing:.08em}
+.role-scope-item h3{font-size:18px;line-height:1.3;margin:0 0 7px}
+.role-scope-item p{font-size:14px;line-height:1.65;margin:0;color:#4F5862}
+.role-closing{max-width:900px;margin:32px 0 0;font-size:18px;line-height:1.5;color:var(--navy);font-weight:650}
+
+/* Hero case — one continuous case-study system */
+.project{padding-top:94px;padding-bottom:96px}
+.project .h2{font-size:clamp(31px,3.45vw,48px);max-width:820px}
+.project-head{grid-template-columns:minmax(0,1.25fr) minmax(310px,.75fr);gap:64px;align-items:end;margin-bottom:34px}
+.project-role{font-size:15px;line-height:1.65}
+.project-hero-image{display:none}
+.project-hero-image img{width:100%;height:100%;object-fit:cover;object-position:center}
+.project-core{grid-template-columns:minmax(0,1.3fr) minmax(280px,.7fr);gap:52px}
+.project-copy-block{grid-template-columns:132px 1fr;gap:20px;padding:18px 0}
+.project-copy-block .label{font-size:11px}
+.project-copy-block p{font-size:14px;line-height:1.7}
+.project-support{margin:0}
+.project-support img{aspect-ratio:1/1;object-fit:cover;object-position:center top}
+.project-support figcaption{margin-top:12px;font-size:11px;line-height:1.55;letter-spacing:.06em;text-transform:uppercase;color:#AFC0D0}
+.project-results{margin-top:36px;padding-top:0;border-top:0}
+.project-results-grid{grid-template-columns:1.06fr .82fr 1fr 1.18fr .94fr}
+.project-result strong{font-size:clamp(30px,3vw,46px)}
+.project-result span{font-size:12px}
+
+/* Video & Product Communication */
+.video-production{background:#F4F5F6}
+.video-production .section-header{margin-bottom:14px}
+.video-intro{max-width:780px;color:#4D5660;margin:0}
+.video-case{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:start;padding:42px 0;border-top:1px solid #D3D9DF}
+.video-case:last-child{border-bottom:1px solid #D3D9DF}
+.video-case.reverse{grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);align-items:center}
+.tvc-case{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:start}
+.tvc-panel{display:flex;flex-direction:column;justify-content:space-between;min-height:100%;gap:24px}
+.tvc-panel-inner{border-top:1px solid #CCD3DA;padding-top:18px}
+.tvc-panel .video-frame{margin-top:28px}
+.tvc-process-only h3{margin:0 0 14px;color:var(--navy);font-size:clamp(24px,2.2vw,32px);line-height:1.2}
+.tvc-process-only .tvc-panel-inner{border-top:0;padding-top:0}
+.tvc-process-only .production-flow{margin-top:0}
+.video-case.reverse .video-visual{order:2;align-self:center}
+.video-case.reverse .video-copy{order:1}
+.video-index{font-size:11px;letter-spacing:.15em;text-transform:uppercase;font-weight:800;color:var(--accent);margin-bottom:10px}
+.video-copy h3{font-size:clamp(24px,2.2vw,32px);line-height:1.2;margin:0 0 24px;color:var(--navy)}
+.video-label{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--accent);font-weight:800;margin:24px 0 7px}
+.video-copy p{font-size:14px;line-height:1.7;color:#4D5660;margin:0}
+.video-frame{position:relative;background:#111;overflow:hidden}
+.video-frame img{width:100%;aspect-ratio:16/8.45;object-fit:cover}
+.video-frame-link{position:absolute;left:18px;bottom:18px;background:rgba(21,26,32,.88);color:white;padding:10px 14px;font-size:12px;font-weight:750;backdrop-filter:blur(6px)}
+.production-flow{margin-top:8px;border-top:0}
+.production-step{display:grid;grid-template-columns:26px 1fr;gap:12px;padding:11px 0;border-bottom:1px solid #D7DCE1}
+.production-step .step-num{font-size:11px;color:var(--accent);font-weight:800}
+.production-step strong{font-size:13px;color:var(--text)}
+.production-step span{font-size:12px;color:var(--muted);display:block;margin-top:2px}
+.video-cta{display:inline-flex;align-items:center;gap:8px;margin-top:22px;font-size:13px;font-weight:800;color:var(--navy);border-bottom:1px solid var(--navy);padding-bottom:3px}
+.agent-visual{background:transparent;padding:8px 0;display:flex;flex-direction:column;justify-content:center;height:100%}
+.agent-visual .agent-title{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:800;margin-bottom:14px}
+.agent-list{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.agent-name{min-height:78px;padding:18px;border:1px solid #CCD3DA;background:#fff;font-size:15px;font-weight:750;color:var(--navy);display:flex;align-items:center;justify-content:center;text-align:center}
+.agent-name:nth-child(even){padding-left:18px}
+
+/* Webinar — tighter progression and data stories */
+.webinars{padding-top:88px;padding-bottom:88px}
+.webinars .section-header{margin-bottom:32px}
+.webinar-role{font-size:16px;line-height:1.7;color:#46505A;margin:0}
+.webinar-framework{display:grid;grid-template-columns:repeat(6,1fr);border-top:0;border-bottom:0;margin:0 0 22px}
+.webinar-framework div{position:relative;padding:15px 16px 15px 0;font-size:11px;font-weight:800;color:var(--navy);letter-spacing:.02em}
+.webinar-framework div::before{content:"";position:absolute;top:-4px;left:0;width:7px;height:7px;border-radius:50%;background:var(--navy)}
+.webinar-framework div:not(:last-child)::after{content:"→";position:absolute;right:12px;color:#98A3AE}
+.webinar-methods{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:34px}
+.webinar-method{display:grid;grid-template-columns:28px 1fr;gap:10px;padding:16px 18px;border:1px solid var(--border);background:#FAFAF9}
+.webinar-method+.webinar-method{border-left:0;padding-left:18px}
+.webinar-method b{font-size:11px;color:var(--accent)}
+.webinar-method span{font-size:13px;font-weight:720;line-height:1.4;color:var(--text)}
+.webinar-stories{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.webinar-story{border:1px solid var(--border);padding:26px;background:#FAFAF9}
+.webinar-story h3{font-size:19px;margin:0 0 24px;color:var(--navy)}
+.story-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px 22px}
+.story-stat strong{display:block;color:var(--navy);font-size:31px;line-height:1;letter-spacing:-.04em}
+.story-stat span{display:block;font-size:12px;color:var(--muted);margin-top:7px;line-height:1.55}
+.story-stat.primary strong{font-size:44px}
+.story-note{margin-top:18px;font-size:12px;line-height:1.65;color:var(--muted)}
+.webinar-close{font-size:clamp(21px,2.15vw,28px);line-height:1.36;margin-top:42px;max-width:900px}
+
+/* PR — visual proof first, text as indexed capability */
+.media{padding-top:88px;padding-bottom:88px}
+.media .section-header{margin-bottom:36px}
+.media-grid{grid-template-columns:minmax(0,.72fr) minmax(0,1.28fr);gap:64px}
+.media-item{padding:15px 0}
+.media-item h3{font-size:16px;margin-bottom:4px}
+.media-item p{font-size:13px;line-height:1.65}
+.media-proof{position:static}
+.media-proof-top{display:flex;align-items:flex-end;gap:20px;padding-bottom:8px;border-bottom:0}
+.media-num{font-size:clamp(56px,6.5vw,88px)}
+.media-proof-title{padding-bottom:6px}
+.media-proof-title .h3{font-size:25px}
+.media-proof-title p{font-size:13px;margin:7px 0 0}
+.media-logo-proof{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#D7DCE1;margin-top:20px;border:1px solid #D7DCE1}
+.media-logo-cell{background:#F8F9FA;min-height:84px;display:flex;align-items:center;justify-content:center;padding:15px}
+.media-logo-cell img{width:auto;max-width:100%;height:38px;object-fit:contain}
+.media-logo-cell img.wide{height:30px}
+.media-names{font-size:12px;line-height:1.75;margin-top:16px}
+.media-journey{margin-top:26px}
+.media-journey span{padding-top:12px;padding-bottom:12px;font-size:11px}
+
+/* Career — hierarchy before detail */
+.journey{padding-top:88px;padding-bottom:88px}
+.journey .section-header{margin-bottom:34px}
+.timeline{gap:38px;margin-top:48px}
+.timeline-item .company{font-size:11px}
+.timeline-item .role{font-size:12px;margin-bottom:15px}
+.timeline-item h3{font-size:20px;line-height:1.28;color:var(--navy);margin-bottom:10px}
+.timeline-item p{font-size:13.5px;line-height:1.7;margin-bottom:13px;color:#525C66}
+.timeline-item .skills{font-size:11px;line-height:1.65}
+.journey-close{margin-top:36px;font-size:17px}
+
+/* Previous experience — proof section, not a second timeline */
+.experience{padding-top:82px;padding-bottom:84px}
+.experience .section-header{margin-bottom:34px}
+.experience .section-header .lead{font-size:16px;max-width:620px}
+.experience-col{padding-top:30px;padding-bottom:34px}
+.experience-col h3{font-size:19px;margin-bottom:8px;color:var(--navy)}
+.exp-stats{border-top:0;padding-top:8px;margin-bottom:24px;gap:24px 20px}
+.exp-stat strong{font-size:36px}
+.exp-stat span{font-size:11.5px}
+.experience-col .desc{font-size:13px;line-height:1.7;color:#59636D;border-top:1px solid #C9D0D7;padding-top:20px;margin:0}
+.exp-meta{margin-top:18px;font-size:11.5px}
+
+/* RAR — strategic analysis board, not keynote slide */
+.rar-insight{padding-top:86px;padding-bottom:88px}
+.rar-insight .section-header{margin-bottom:34px}
+.rar-insight .h2{font-size:clamp(31px,3.45vw,47px);max-width:980px;letter-spacing:-.028em}
+.rar-map{display:grid;grid-template-columns:1fr 1fr;align-items:stretch;gap:22px;margin-top:30px}
+.rar-column{border:1px solid #BAC7D2;padding:22px;background:rgba(255,255,255,.32)}
+.rar-column-title{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--accent);font-weight:800;margin-bottom:12px}
+.rar-column p{font-size:14px;line-height:1.7;margin:0;color:#3F4B57}
+.rar-terms{display:flex;flex-wrap:wrap;gap:7px 0;margin-top:16px;font-size:13px;font-weight:650;color:#3A4C5E}
+.rar-terms span:not(:last-child)::after{content:" · ";color:#8B9AAA;margin:0 8px}
+.rar-connector{display:none}
+.rar-observation-row{display:block;border-top:1px solid #BAC7D2;border-bottom:1px solid #BAC7D2;padding:28px 0;margin-top:36px}
+.rar-observation-label{display:block;font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--accent);font-weight:800;margin-bottom:14px}
+.rar-observation-text{font-size:clamp(19px,1.8vw,25px);line-height:1.5;color:var(--navy);font-weight:620;letter-spacing:-.012em;max-width:980px}
+.rar-problem{display:block;padding-top:34px}
+.rar-problem-label{display:block;font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--accent);font-weight:800;margin-bottom:14px}
+.rar-problem .anchor{font-size:clamp(32px,3.5vw,46px);line-height:1.1;letter-spacing:-.035em;font-weight:760;color:var(--navy);max-width:860px}
+.rar-problem .lead{margin:20px 0 0;font-size:16px}
+.rar-questions{display:grid;grid-template-columns:1fr 1fr;margin-top:24px;border-top:1px solid #BAC7D2}
+.rar-question{padding:15px 20px 15px 0;font-size:13px;font-weight:720;color:#384C60;border-bottom:1px solid #BAC7D2;line-height:1.55}
+.rar-question:nth-child(even){border-left:1px solid #BAC7D2;padding-left:20px}
+.insight-close{margin-top:34px;font-size:clamp(22px,2.2vw,30px);line-height:1.35;max-width:850px}
+
+/* Directions — compact strategic recommendation */
+.directions{padding-top:82px;padding-bottom:86px}
+.direction{padding-top:28px;padding-bottom:28px}
+.direction h3{font-size:19px}
+.direction p{font-size:13.5px;line-height:1.65}
+
+@media (max-width:980px){
+  .role-overview,.video-case,.video-case.reverse,.tvc-case,.webinar-stories,.rar-map{grid-template-columns:1fr}
+  .video-case.reverse .video-visual,.video-case.reverse .video-copy{order:initial}
+  .role-scope-grid{grid-template-columns:1fr}
+  .role-scope-item:nth-child(even){border-left:0;padding-left:0}
+  .role-scope-item:nth-child(n+2){border-top:1px solid var(--border)}
+  .project-hero-image{max-height:none}
+  .webinar-methods{grid-template-columns:1fr 1fr}
+  .webinar-method:nth-child(3){border-left:0;padding-left:18px}
+  .webinar-method:nth-child(4){border-top:0}
+  .media-logo-proof{grid-template-columns:repeat(2,1fr)}
+  .rar-connector{transform:rotate(90deg);padding:0}
+  .rar-observation-row,.rar-problem{gap:12px}
+}
+@media (max-width:640px){
+  .section{padding:70px 0}
+  .h2{font-size:34px}
+  .role-meta-row{display:block}
+  .team-proof-inline{border-left:0;border-top:1px solid var(--border);padding:14px 0 0;margin-top:14px}
+  .role-scope-item{grid-template-columns:34px 1fr;padding-right:0}
+  .project-hero-image{aspect-ratio:auto}
+  .project-hero-image img{height:auto;object-fit:contain}
+  .video-case{padding:36px 0;gap:28px}
+  .agent-list{grid-template-columns:1fr}
+  .agent-name:nth-child(even){border-left:0;padding-left:0}
+  .webinar-framework{grid-template-columns:1fr 1fr}
+  .webinar-framework div{border-bottom:1px solid var(--border)}
+  .webinar-methods{grid-template-columns:1fr}
+  .webinar-method+.webinar-method,.webinar-method:nth-child(4){border-left:0;border-top:0;padding-left:18px}
+  .story-stats{grid-template-columns:1fr}
+  .media-logo-proof{grid-template-columns:1fr 1fr}
+  .rar-observation-text{font-size:19px}
+  .rar-questions{grid-template-columns:1fr}
+  .rar-question:nth-child(even){border-left:0;padding-left:0}
+}
+
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="#intro">VŨ CẨM LY</a>
+    <button class="menu-btn" aria-label="Mở menu" aria-expanded="false">☰</button>
+    <nav class="nav" aria-label="Điều hướng chính">
+      <a href="#intro">Giới thiệu</a>
+      <a href="#projects">Dự án</a>
+      <a href="#media">Báo chí</a>
+      <a href="#journey">Hành trình</a>
+      <a href="#rar-insight">Góc nhìn</a>
+      <a href="#contact">Liên hệ</a>
+      <!-- REPLACE WITH FINAL CV FILE -->
+      <a class="download" href="#">Tải CV</a>
+    </nav>
+  </div>
+</header>
+<main>
+
+<!-- SECTION 01 — HERO -->
+<section class="hero" id="intro">
+  <div class="container hero-grid">
+    <div class="reveal">
+      <p class="eyebrow">PORTFOLIO · 2022–2026</p>
+      <h1 class="h1 hero-title">VŨ CẨM LY</h1>
+      <p class="hero-role">NHÂN VIÊN TRUYỀN THÔNG</p>
+      <p class="hero-sub">Công nghệ · AI · Chuyển đổi số</p>
+      <p class="hero-quote">“Nếu công nghệ phức tạp, truyền thông phải làm nó trở nên dễ hiểu, dễ tiếp cận và hữu ích trong đời sống.”</p>
+      <p class="hero-intro">Tôi làm truyền thông trong các doanh nghiệp công nghệ, từ viễn thông, nền tảng số đến B2B SaaS, AI và chuyển đổi số. Hiện phụ trách Branding tại 1Office.</p>
+      <div class="hero-meta">
+        <span><strong>FPT Telecom → Sendo Farm → 1Office</strong></span>
+        <span>Strategy · Content · PR &amp; Media</span>
+      </div>
+      <div class="btns">
+        <a class="btn primary" href="#projects">Xem dự án tiêu biểu ↓</a>
+        <!-- REPLACE WITH FINAL CV FILE -->
+        <a class="btn" href="#">Tải CV</a>
+      </div>
+    </div>
+    <figure class="hero-photo reveal">
+      <img src="assets/vu-cam-ly-portrait.png" alt="Chân dung chuyên nghiệp của Vũ Cẩm Ly" fetchpriority="high">
+      <figcaption class="photo-caption">Vũ Cẩm Ly · Communications Portfolio</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- SECTION 02 — HIGHLIGHTS -->
+<section class="section highlights" id="highlights">
+  <div class="container">
+    <div class="section-header single reveal">
+      <div>
+        <p class="eyebrow">DẤU ẤN NỔI BẬT</p>
+        <h2 class="h2">Quy mô &amp; kết quả truyền thông</h2>
+      </div>
+    </div>
+    <div class="metrics-top reveal">
+      <article class="metric-hero">
+        <div class="metric-num">253,2 TRIỆU</div>
+        <div class="metric-label">lượt xem nội dung trên Facebook</div>
+        <div class="metric-note">Trong giai đoạn phụ trách Branding tại 1Office</div>
+      </article>
+      <article class="metric-hero">
+        <div class="metric-num">153,4K</div>
+        <div class="metric-label">lượt tương tác nội dung</div>
+        <div class="metric-up">↑ 559,7% so với giai đoạn trước khi tôi gia nhập 1Office</div>
+      </article>
+    </div>
+    <div class="metrics-bottom reveal">
+      <article class="metric-small">
+        <div class="metric-num">1.286</div>
+        <div class="metric-label">lượt đăng ký tham gia sự kiện</div>
+        <div class="metric-note"><strong>Launching 1Office Next 2025</strong></div>
+        <div class="metric-note">Ra mắt phiên bản nền tảng tự động hóa vận hành doanh nghiệp của 1Office</div>
+      </article>
+      <article class="metric-small">
+        <div class="metric-num">14</div>
+        <div class="metric-label">cơ quan báo chí &amp; truyền hình</div>
+        <div class="metric-note">đã có cơ hội phối hợp triển khai truyền thông</div>
+        <div class="metric-list sr-only">VTV · HTV · VnExpress · CafeF · VietnamNet · Tuổi Trẻ · Thanh Niên · TheLEADER · ICT Vietnam · Doanh Nhân Sài Gòn · DealStreetAsia · CafeBiz · GenK · Kênh14</div>
+      </article>
+      <article class="metric-small">
+        <div class="metric-num">11+</div>
+        <div class="metric-label">sự kiện &amp; chương trình truyền thông</div>
+        <div class="metric-note">đã tham gia triển khai qua nhiều vai trò từ ý tưởng, nội dung, truyền thông đến điều phối thực thi</div>
+        <div class="metric-list">Launching · Webinar · Corporate Event · Gala Dinner · Partnership · Livestream · Community Event</div>
+      </article>
+    </div>
+    <div class="media-logo-marquee reveal" aria-label="Một số cơ quan báo chí và truyền hình đã có cơ hội phối hợp triển khai truyền thông">
+      <div class="media-logo-track">
+        <div class="media-logo-set">
+          <img class="media-logo" src="assets/logo-vtv.webp" alt="VTV" loading="lazy">
+          <img class="media-logo" src="assets/logo-htv.webp" alt="HTV" loading="lazy">
+          <img class="media-logo logo-wide" src="assets/logo-cafef.png" alt="CafeF" loading="lazy">
+          <img class="media-logo" src="assets/logo-kenh14.webp" alt="Kênh14" loading="lazy">
+          <img class="media-logo logo-wide" src="assets/logo-theleader.png" alt="TheLEADER" loading="lazy">
+          <img class="media-logo logo-wide" src="assets/logo-tuoitre-online.png" alt="Tuổi Trẻ Online" loading="lazy">
+          <img class="media-logo logo-wide" src="assets/logo-doanhnhansaigon.jpg" alt="Doanh Nhân Sài Gòn" loading="lazy">
+          <img class="media-logo logo-wide" src="assets/logo-vtv-online.jpeg" alt="VTV Online" loading="lazy">
+        </div>
+        <div class="media-logo-set" aria-hidden="true">
+          <img class="media-logo" src="assets/logo-vtv.webp" alt="" loading="lazy">
+          <img class="media-logo" src="assets/logo-htv.webp" alt="" loading="lazy">
+          <img class="media-logo logo-wide" src="assets/logo-cafef.png" alt="" loading="lazy">
+          <img class="media-logo" src="assets/logo-kenh14.webp" alt="" loading="lazy">
+          <img class="media-logo logo-wide" src="assets/logo-theleader.png" alt="" loading="lazy">
+          <img class="media-logo logo-wide" src="assets/logo-tuoitre-online.png" alt="" loading="lazy">
+          <img class="media-logo logo-wide" src="assets/logo-doanhnhansaigon.jpg" alt="" loading="lazy">
+          <img class="media-logo logo-wide" src="assets/logo-vtv-online.jpeg" alt="" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 03 — CAPABILITIES -->
+<section class="section capabilities" id="capabilities">
+  <div class="container">
+    <div class="section-header reveal">
+      <div>
+        <p class="eyebrow">NĂNG LỰC CHUYÊN MÔN</p>
+        <h2 class="h2">Năng lực truyền thông tích hợp</h2>
+      </div>
+      <p class="lead">Từ nghiên cứu và hoạch định đến phát triển nội dung, PR, truyền thông sự kiện, sản xuất và đo lường hiệu quả.</p>
+    </div>
+    <div class="editorial-list reveal">
+      <div class="editorial-row"><div class="num">01</div><h3>Nghiên cứu và hoạch định truyền thông</h3><p>Nghiên cứu thị trường, khách hàng mục tiêu và đối thủ. Xác định mục tiêu, thông điệp, nhóm công chúng, kênh triển khai và kế hoạch truyền thông phù hợp với từng chương trình.</p></div>
+      <div class="editorial-row"><div class="num">02</div><h3>Nội dung và biên tập</h3><p>Xây định hướng nội dung cho thương hiệu và sản phẩm. Trực tiếp phát triển, biên tập và kiểm soát chất lượng nội dung trên Social, Website, PR, video và các tài sản truyền thông.</p></div>
+      <div class="editorial-row"><div class="num">03</div><h3>PR và quan hệ báo chí</h3><p>Phối hợp với biên tập viên, phóng viên, cơ quan báo chí, truyền hình và các đối tác truyền thông. Phát triển góc khai thác, nội dung PR và các hoạt động lan tỏa phù hợp với từng chiến dịch.</p></div>
+      <div class="editorial-row"><div class="num">04</div><h3>Truyền thông sự kiện và sản xuất</h3><p>Xây ý tưởng, thông điệp, nội dung chương trình và kế hoạch truyền thông cho sự kiện. Phối hợp sản xuất key visual, video, hình ảnh, tài liệu truyền thông và các hoạt động trước, trong và sau chương trình.</p></div>
+      <div class="editorial-row"><div class="num">05</div><h3>Đo lường và tối ưu</h3><p>Theo dõi hiệu quả nội dung, kênh truyền thông và hành trình người tham dự. Tổng hợp dữ liệu, xác định điểm cần cải thiện và chuyển kết quả triển khai thành đề xuất cho kế hoạch tiếp theo.</p></div>
+    </div>
+    <div class="process-line reveal" aria-label="Quy trình năng lực truyền thông">
+      <div class="process-step">Nghiên cứu</div><div class="process-step">Hoạch định</div><div class="process-step">Nội dung</div><div class="process-step">Lan tỏa</div><div class="process-step">Đo lường</div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 04 — CURRENT ROLE -->
+<section class="section current-role" id="current-role">
+  <div class="container">
+    <div class="role-overview">
+      <figure class="role-image reveal">
+        <img src="assets/vu-cam-ly-coordination.png" alt="Vũ Cẩm Ly điều phối hoạt động tại sự kiện 1Office Next" loading="lazy">
+        <figcaption class="caption">Thực thi · Điều phối · Chịu trách nhiệm</figcaption>
+      </figure>
+      <div class="role-summary reveal">
+        <p class="eyebrow">VAI TRÒ HIỆN TẠI</p>
+        <h2 class="h2">Định hướng và điều phối hoạt động Branding tại 1Office</h2>
+        <div class="role-meta-row">
+          <div class="role-meta">Leader Content Branding · 04/2025 – Hiện tại</div>
+          <div class="team-proof-inline"><strong>05</strong><span>nhân sự trong đội ngũ đang quản lý</span></div>
+        </div>
+        <p class="lead">Hiện phụ trách định hướng Branding và Content tại 1Office, đồng thời quản lý đội ngũ 5 nhân sự. Công việc tập trung vào việc kết nối mục tiêu thương hiệu với sản phẩm, nội dung, PR, sự kiện và các hoạt động truyền thông hướng tới doanh nghiệp.</p>
+      </div>
+    </div>
+    <div class="role-scope-grid reveal">
+      <div class="role-scope-item"><div class="num">01</div><div><h3>Định hướng thương hiệu và nội dung</h3><p>Nghiên cứu thị trường, khách hàng và bối cảnh cạnh tranh. Xây định hướng truyền thông, thông điệp và kế hoạch nội dung cho các chiến dịch trọng điểm.</p></div></div>
+      <div class="role-scope-item"><div class="num">02</div><div><h3>Quản lý đội ngũ và chất lượng đầu ra</h3><p>Phân công công việc, xây brief, review và đảm bảo chất lượng nội dung, hình ảnh và các tài sản truyền thông trước khi triển khai.</p></div></div>
+      <div class="role-scope-item"><div class="num">03</div><div><h3>Phối hợp triển khai truyền thông tích hợp</h3><p>Làm việc cùng Product, Sales, Performance, Design, Media và các đối tác bên ngoài để triển khai PR, Social, sự kiện, video và các chương trình truyền thông thương hiệu.</p></div></div>
+      <div class="role-scope-item"><div class="num">04</div><div><h3>Đo lường và tối ưu</h3><p>Theo dõi hiệu quả nội dung, kênh và các chương trình truyền thông. Tổng hợp dữ liệu, rút insight và điều chỉnh định hướng theo từng giai đoạn.</p></div></div>
+    </div>
+    <p class="role-closing reveal">Từ trực tiếp triển khai nội dung đến định hướng, điều phối nguồn lực và chịu trách nhiệm về chất lượng truyền thông.</p>
+  </div>
+</section>
+
+<!-- SECTION 05 — PROJECT -->
+<section class="section project" id="projects">
+  <div class="container">
+    <div class="project-head reveal">
+      <div>
+        <p class="eyebrow">DỰ ÁN TIÊU BIỂU</p>
+        <div class="project-kicker">Launching 1Office Next 2025</div>
+        <h2 class="h2">Truyền thông cho sự kiện ra mắt phiên bản nền tảng tự động hóa vận hành doanh nghiệp của 1Office</h2>
+      </div>
+      <p class="project-role">Phụ trách xây dựng kế hoạch truyền thông, phát triển nội dung và điều phối triển khai trên các kênh Organic cùng hệ thống kênh lan tỏa trước, trong và sau sự kiện.</p>
+    </div>
+        <div class="project-core reveal">
+      <div>
+        <div class="project-copy-block"><div class="label">Bối cảnh</div><p>1Office Next 2025 là sự kiện ra mắt phiên bản mới của 1Office trong hành trình phát triển từ SaaS sang nền tảng vận hành doanh nghiệp ứng dụng AI và Automation.<br><br>Bài toán không chỉ là thu hút người tham dự mà còn cần làm rõ sự chuyển dịch của sản phẩm, tạo độ phủ truyền thông và củng cố vị thế 1Office trong nhóm doanh nghiệp quan tâm đến AI và chuyển đổi số.</p></div>
+        <div class="project-copy-block"><div class="label">Triển khai 01</div><p><strong>Lập kế hoạch truyền thông</strong><br>Xác định nhóm công chúng, thông điệp, các giai đoạn truyền thông và vai trò của từng kênh trong hành trình thu hút khách tham dự.</p></div>
+        <div class="project-copy-block"><div class="label">Triển khai 02</div><p><strong>Triển khai các kênh Organic</strong><br>Điều phối nội dung trên Social, Website và các điểm chạm Organic nhằm tạo nhận biết, dẫn traffic và thúc đẩy đăng ký tham gia sự kiện.</p></div>
+        <div class="project-copy-block"><div class="label">Triển khai 03</div><p><strong>Mở rộng độ phủ qua PR và Media</strong><br>Phối hợp teaser, PR, phỏng vấn lãnh đạo, thông cáo báo chí và truyền hình để mở rộng độ phủ cho sự kiện và câu chuyện chuyển đổi của 1Office.</p></div>
+        <div class="project-copy-block"><div class="label">Triển khai 04</div><p><strong>Điều phối tài sản truyền thông</strong><br>Phối hợp sản xuất hình ảnh, video và các tài sản truyền thông xuyên suốt chiến dịch.</p></div>
+      </div>
+      <figure class="project-support">
+        <img src="assets/1office-next-event-portrait.png" alt="Vũ Cẩm Ly tại không gian sự kiện 1Office Next" loading="lazy">
+        <figcaption>Bằng chứng triển khai · 1Office Next 2025</figcaption>
+      </figure>
+    </div>
+    <div class="project-results reveal">
+      <p class="eyebrow">KẾT QUẢ</p>
+      <div class="project-results-grid">
+        <div class="project-result"><strong>1.286</strong><span>lượt đăng ký từ tổng nguồn Marketing</span></div>
+        <div class="project-result"><strong>304</strong><span>khách tham dự</span></div>
+        <div class="project-result"><strong>303</strong><span>lượt đăng ký từ Organic</span><em>Đạt 105% KPI</em></div>
+        <div class="project-result"><strong>73 · 24</strong><span>đăng ký · tham dự từ Social Organic</span><em>Đạt 174% KPI đăng ký và 120% KPI tham dự</em></div>
+        <div class="project-result"><strong>11</strong><span>cơ quan báo chí và truyền hình tham gia lan tỏa chiến dịch</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 06 — VIDEO & PRODUCT COMMUNICATION -->
+<section class="section video-production" id="video-production">
+  <div class="container">
+    <div class="section-header single reveal">
+      <div>
+        <p class="eyebrow">VIDEO PRODUCTION</p>
+        <h2 class="h2">Từ câu chuyện thương hiệu đến truyền thông sản phẩm công nghệ</h2>
+        <p class="video-intro">Tham gia phát triển và sản xuất các nội dung video phục vụ những cột mốc thương hiệu và hoạt động ra mắt sản phẩm mới của 1Office.</p>
+      </div>
+    </div>
+
+    <article class="video-case tvc-case reveal">
+      <div class="tvc-panel">
+        <div>
+          <div class="video-index">01 · TVC HÀNH TRÌNH 10 NĂM 1OFFICE</div>
+          <h3>Hành trình 10 năm của 1Office</h3>
+          <div class="tvc-panel-inner">
+            <div class="video-label">Bối cảnh</div>
+            <p>Video được sản xuất cho <strong>Launching 1Office Next 2025</strong>, đồng thời là cột mốc kỷ niệm <strong>10 năm thành lập 1Office</strong>.<br><br>Nội dung kết nối hai câu chuyện trong cùng một sản phẩm: <strong>hành trình 10 năm phát triển của thương hiệu</strong> và <strong>bước chuyển sang thế hệ sản phẩm mới với AI, Automation và No-code</strong>.</p>
+          </div>
+        </div>
+        <a class="video-frame" href="https://youtu.be/JvWV6ZFT3HI?si=B28ki8C-v6MHqKYK" target="_blank" rel="noopener" aria-label="Xem TVC Hành trình 10 năm của 1Office trên YouTube">
+          <img src="assets/tvc-10-years-frame.png" alt="Khung hình TVC Hành trình 10 năm của 1Office" loading="lazy">
+          <span class="video-frame-link">Xem TVC ↗</span>
+        </a>
+      </div>
+      <div class="tvc-panel tvc-process-only">
+        <div>
+          <div class="video-index">02 · QUÁ TRÌNH SẢN XUẤT</div>
+          <h3>Quá trình sản xuất</h3>
+          <div class="tvc-panel-inner">
+            <div class="production-flow">
+              <div class="production-step"><div class="step-num">01</div><div><strong>Xây dựng định hướng nội dung</strong></div></div>
+              <div class="production-step"><div class="step-num">02</div><div><strong>Tìm kiếm và lựa chọn Production House</strong></div></div>
+              <div class="production-step"><div class="step-num">03</div><div><strong>Trao đổi concept và kịch bản</strong></div></div>
+              <div class="production-step"><div class="step-num">04</div><div><strong>Phối hợp sản xuất</strong></div></div>
+              <div class="production-step"><div class="step-num">05</div><div><strong>Feedback các vòng dựng</strong></div></div>
+              <div class="production-step"><div class="step-num">06</div><div><strong>Hoàn thiện và release tại sự kiện</strong></div></div>
+            </div>
+            <a class="video-cta" href="https://youtu.be/JvWV6ZFT3HI?si=B28ki8C-v6MHqKYK" target="_blank" rel="noopener">Xem TVC →</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="video-case reverse reveal">
+      <div class="video-visual">
+        <div class="agent-visual">
+          <div class="agent-title">08 AI AGENT · 1OFFICE NEXT</div>
+          <div class="agent-list">
+            <div class="agent-name">1AI Assistant</div><div class="agent-name">1AI Salary</div>
+            <div class="agent-name">1AI Process</div><div class="agent-name">1AI Meeting</div>
+            <div class="agent-name">1AI Monitor</div><div class="agent-name">1AI Talent</div>
+            <div class="agent-name">1AI Performance</div><div class="agent-name">1AI Dashboard</div>
+          </div>
+        </div>
+      </div>
+      <div class="video-copy">
+        <div class="video-index">02 · SERIES 1AI AGENT</div>
+        <h3>8 AI Agent cho các nghiệp vụ vận hành doanh nghiệp</h3>
+        <div class="video-label">Bối cảnh</div>
+        <p>Trong quá trình 1Office mở rộng từ nền tảng quản trị doanh nghiệp sang hệ sinh thái ứng dụng <strong>AI và No-code</strong>, chuỗi video được phát triển nhằm giới thiệu các AI Agent gắn với từng bài toán vận hành cụ thể trong doanh nghiệp.</p>
+        <div class="video-label">Quá trình sản xuất</div>
+        <div class="production-flow">
+          <div class="production-step"><div class="step-num">01</div><div><strong>Tiếp nhận thông tin và trao đổi với BA</strong><span>Phân tích nghiệp vụ, tính năng và bài toán của từng AI Agent.</span></div></div>
+          <div class="production-step"><div class="step-num">02</div><div><strong>Phát triển nội dung</strong><span>Chuyển thông tin sản phẩm thành nội dung rõ ràng, đúng nghiệp vụ và phù hợp với format video.</span></div></div>
+          <div class="production-step"><div class="step-num">03</div><div><strong>Chuyển màn hình Figma cho Media</strong><span>Chuẩn bị phần hiển thị sản phẩm và các màn hình cần sử dụng trong video.</span></div></div>
+          <div class="production-step"><div class="step-num">04</div><div><strong>Media dựng video</strong></div></div>
+          <div class="production-step"><div class="step-num">05</div><div><strong>Feedback và chỉnh sửa</strong></div></div>
+          <div class="production-step"><div class="step-num">06</div><div><strong>Final video</strong></div></div>
+        </div>
+        <a class="video-cta" href="https://youtube.com/playlist?list=PLGZwQDWd0HVzWGycImiWMzUN8VQJidsAR&si=ATwTMSIpFiBou9sK" target="_blank" rel="noopener">Xem series 1AI Agent →</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- SECTION 07 — WEBINARS -->
+<section class="section webinars" id="webinars">
+  <div class="container">
+    <div class="section-header single reveal">
+      <div><p class="eyebrow">WEBINAR B2B</p><h2 class="h2">Từ lượt đăng ký đến chất lượng người tham dự</h2></div>
+    </div>
+    <div class="webinar-framework reveal"><div>Insight</div><div>Chủ đề</div><div>Đăng ký</div><div>Tham dự</div><div>Retention</div><div>Lead</div></div>
+    <div class="webinar-methods reveal">
+      <div class="webinar-method"><b>01</b><span>Xác định đúng chủ đề và nhóm khách mời</span></div>
+      <div class="webinar-method"><b>02</b><span>Thiết kế hành trình thu hút và xác nhận khách</span></div>
+      <div class="webinar-method"><b>03</b><span>Phát triển nội dung chương trình</span></div>
+      <div class="webinar-method"><b>04</b><span>Đo lường chất lượng thay vì chỉ nhìn số đăng ký</span></div>
+    </div>
+    <div class="webinar-stories reveal">
+      <article class="webinar-story">
+        <h3>Webinar ngành Xây dựng</h3>
+        <div class="story-stats">
+          <div class="story-stat primary"><strong>194</strong><span>số người đăng ký tham dự</span></div>
+          <div class="story-stat primary"><strong>92</strong><span>số người tham dự thực tế</span></div>
+          <div class="story-stat"><strong>ICP</strong><span>93,8% Manager+ · 51,5% CEO/C-level</span></div>
+        </div>
+      </article>
+      <article class="webinar-story">
+        <h3>Webinar B2B tháng 9</h3>
+        <div class="story-stats">
+          <div class="story-stat primary"><strong>457</strong><span>số người đăng ký tham dự</span></div>
+          <div class="story-stat primary"><strong>205</strong><span>số người tham dự thực tế</span></div>
+          <div class="story-stat"><strong>ICP</strong><span>Nhóm quản lý, chủ doanh nghiệp và khách hàng B2B quan tâm giải pháp vận hành</span></div>
+        </div>
+        <div class="story-note">Bổ sung chất lượng tham dự: 95 phút thời gian tham dự trung bình · 57% ở lại ≥90 phút · 26 lead tư vấn sâu</div>
+      </article>
+    </div>
+    <p class="webinar-close reveal">Không chỉ thu hút nhiều người đăng ký, mà phải thu hút đúng người và giữ họ ở lại đủ lâu để nội dung tạo giá trị.</p>
+  </div>
+</section>
+
+<!-- SECTION 08 — MEDIA -->
+<section class="section media" id="media">
+  <div class="container">
+    <div class="section-header single reveal"><div><p class="eyebrow">PR &amp; MEDIA RELATIONS</p><h2 class="h2">Mở rộng độ phủ thương hiệu qua báo chí và truyền hình</h2></div></div>
+    <div class="media-grid reveal">
+      <div class="media-list">
+        <div class="media-item"><h3>Xây dựng góc truyền thông</h3><p>Từ mục tiêu từng chiến dịch, xác định câu chuyện để phát triển thành PR, phỏng vấn lãnh đạo, thông cáo báo chí hoặc nội dung truyền hình.</p></div>
+        <div class="media-item"><h3>Phát triển và biên tập nội dung</h3><p>Chuẩn bị thông tin, outline, biên tập và kiểm soát thông điệp trước khi xuất bản.</p></div>
+        <div class="media-item"><h3>Phối hợp báo chí và đối tác truyền thông</h3><p>Làm việc với cơ quan báo chí, phóng viên, agency và đối tác để đảm bảo tiến độ, tài liệu, điều phối phỏng vấn và định hướng thương hiệu.</p></div>
+        <div class="media-item"><h3>Kết nối PR với chiến dịch tổng thể</h3><p>Đặt PR trong hành trình truyền thông chung từ nhận diện, ra mắt sản phẩm đến lan tỏa sau sự kiện.</p></div>
+      </div>
+      <div class="media-proof">
+        <div class="media-proof-top"><div class="media-num">14</div><div class="media-proof-title"><h3 class="h3">cơ quan báo chí &amp; truyền hình</h3><p class="muted">đã có cơ hội phối hợp triển khai truyền thông trong quá trình làm việc</p></div></div>
+        <div class="media-logo-proof"><div class="media-logo-cell"><img class="" src="assets/logo-vtv.webp" alt="VTV" loading="lazy"></div><div class="media-logo-cell"><img class="" src="assets/logo-htv.webp" alt="HTV" loading="lazy"></div><div class="media-logo-cell"><img class="wide" src="assets/logo-cafef.png" alt="CafeF" loading="lazy"></div><div class="media-logo-cell"><img class="" src="assets/logo-kenh14.webp" alt="Kênh14" loading="lazy"></div><div class="media-logo-cell"><img class="wide" src="assets/logo-theleader.png" alt="TheLEADER" loading="lazy"></div><div class="media-logo-cell"><img class="wide" src="assets/logo-tuoitre-online.png" alt="Tuổi Trẻ Online" loading="lazy"></div><div class="media-logo-cell"><img class="wide" src="assets/logo-doanhnhansaigon.jpg" alt="Doanh Nhân Sài Gòn" loading="lazy"></div><div class="media-logo-cell"><img class="wide" src="assets/logo-vtv-online.jpeg" alt="VTV Online" loading="lazy"></div></div>
+        <div class="media-names">VTV · HTV · VnExpress · CafeF · VietnamNet · Tuổi Trẻ · Thanh Niên · TheLEADER · ICT Vietnam · Doanh Nhân Sài Gòn · DealStreetAsia · CafeBiz · GenK · Kênh14</div>
+        <div class="media-journey"><span>Teaser sự kiện</span><span>Tin gọi vốn</span><span>Lan tỏa sau sự kiện</span><span>Phỏng vấn C-level</span><span>Thông cáo báo chí</span><span>Truyền hình</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 09 — JOURNEY -->
+<section class="section journey" id="journey">
+  <div class="container">
+    <div class="section-header single reveal"><div><p class="eyebrow">HÀNH TRÌNH PHÁT TRIỂN</p><h2 class="h2">Từ triển khai nội dung đến truyền thông tích hợp</h2></div></div>
+    <div class="timeline reveal">
+      <article class="timeline-item"><div class="company">01 · FPT TELECOM</div><div class="role">Brand Marketing Specialist · 04/2022 – 04/2023</div><h3>Xây nền tảng về Content, Social và PR</h3><p>Tham gia xây kế hoạch nội dung đa kênh, trực tiếp viết và biên tập nội dung, phối hợp truyền thông online và offline. Đồng thời bắt đầu làm việc với báo chí, KOC và các bên liên quan trong những chiến dịch thương hiệu.</p><div class="skills">Content · Social Media · PR · KOC · Campaign Execution</div></article>
+      <article class="timeline-item"><div class="company">02 · SENDO FARM</div><div class="role">Social Media Executive · 06/2023 – 08/2024</div><h3>Mở rộng sang đa kênh, sản xuất và sự kiện</h3><p>Phụ trách nội dung trên Social, Zalo và ứng dụng Sendo Farm. Tham gia các hoạt động KOC, livestream, sản xuất media, activation và sự kiện nhằm mở rộng nhận diện và tạo thêm điểm chạm với người dùng.</p><div class="skills">Multi-channel Communication · KOC · Media Production · Event · App Communication</div></article>
+      <article class="timeline-item"><div class="company">03 · 1OFFICE</div><div class="role">Leader Content Branding · 04/2025 – Hiện tại</div><h3>Phát triển theo hướng Branding và truyền thông tích hợp</h3><p>Phụ trách định hướng Branding và Content cho doanh nghiệp B2B công nghệ, đồng thời mở rộng sang PR, truyền thông sản phẩm AI, sự kiện, phối hợp đa phòng ban và quản lý đội ngũ 5 nhân sự.</p><div class="skills">Branding · Integrated Communications · PR &amp; Media · Event Communication · Team Management</div></article>
+    </div>
+    <div class="journey-close reveal">Nội dung → Đa kênh → Thương hiệu → Truyền thông tích hợp</div>
+  </div>
+</section>
+
+<!-- SECTION 10 — EXPERIENCE PROOF -->
+<section class="section experience" id="experience">
+  <div class="container">
+    <div class="section-header single reveal"><div><p class="eyebrow">KINH NGHIỆM TÍCH LŨY</p><h2 class="h2">Một số kết quả nổi bật ở các chặng công việc</h2></div></div>
+    <div class="experience-grid reveal">
+      <article class="experience-col">
+        <div class="company">SENDO FARM</div><div class="role">Social Media Executive · 06/2023 – 08/2024</div><h3>Tăng trưởng kênh và mở rộng điểm chạm người dùng</h3>
+        <div class="exp-stats"><div class="exp-stat"><strong>2.000 → 5.000</strong><span>lượt thích fanpage trong 3 tháng từ tăng trưởng Organic</span></div><div class="exp-stat"><strong>100K+</strong><span>lượt xem trung bình trên mỗi video KOC TikTok</span></div><div class="exp-stat"><strong>20K</strong><span>lượt xem Megalive 5.5</span></div><div class="exp-stat"><strong>1.000+</strong><span>voucher được sử dụng trong và sau chương trình</span></div></div>
+        <p class="desc">Tham gia xây lại định hướng nội dung cho fanpage Sendo Farm Hà Nội, triển khai nội dung trên Facebook, Zalo, TikTok và ứng dụng. Đồng thời phối hợp KOC, Media, livestream và các hoạt động sự kiện để tăng nhận diện và tương tác với người dùng.</p>
+        <div class="exp-meta"><strong>Media:</strong> VnExpress · Kênh14 · CafeF</div>
+      </article>
+      <article class="experience-col">
+        <div class="company">FPT TELECOM</div><div class="role">Brand Marketing Specialist · 04/2022 – 04/2023</div><h3>Xây nền tảng về Content, Social và PR</h3>
+        <div class="exp-stats"><div class="exp-stat"><strong>20–30%</strong><span>mức tăng trung bình hàng tháng về Reach và Engagement trên Facebook và TikTok</span></div><div class="exp-stat"><strong>10+</strong><span>bài PR được triển khai trên các kênh báo chí lớn</span></div></div>
+        <p class="desc">Tham gia lập kế hoạch truyền thông trên Facebook, TikTok và Zalo, trực tiếp phát triển nội dung và phối hợp cùng các phòng ban cho các hoạt động thương hiệu. Đồng thời làm việc với báo chí và KOC trong các chiến dịch truyền thông.</p>
+        <div class="exp-meta"><strong>Media:</strong> VnExpress · CafeBiz · GenK · Kênh14<br><strong>KOC:</strong> Lê Bống · Phương Ku · Hùng Rơm</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 11A — RAR INSIGHT -->
+<section class="section rar-insight" id="rar-insight">
+  <div class="container">
+    <div class="section-header single reveal"><div><p class="eyebrow">GÓC NHÌN VỀ RAR CENTER</p><h2 class="h2">TỪ QUAN SÁT ĐẾN BÀI TOÁN TRUYỀN THÔNG</h2></div></div>
+    <div class="rar-map reveal">
+      <div class="rar-column">
+        <div class="rar-column-title">01 · Một hệ sinh thái ngày càng rộng</div>
+        <p>RAR Center đang sở hữu hệ sinh thái giải pháp trải rộng từ định danh và xác thực điện tử đến các ứng dụng trong:</p>
+        <div class="rar-terms"><span>Hàng không</span><span>Ngân hàng</span><span>Giao thông</span><span>Dịch vụ công</span><span>Lưu trú</span><span>Y tế</span><span>Doanh nghiệp</span></div>
+      </div>
+      <div class="rar-connector">→</div>
+      <div class="rar-column">
+        <div class="rar-column-title">Nhiều nhóm công chúng</div>
+        <p>Đi cùng với đó là nhiều nhóm công chúng có nhu cầu rất khác nhau:</p>
+        <div class="rar-terms"><span>Người dân</span><span>Doanh nghiệp</span><span>Đối tác</span><span>Cơ quan</span><span>Các ngành dịch vụ</span><span>Cộng đồng công nghệ</span></div>
+      </div>
+    </div>
+    <div class="rar-observation-row reveal">
+      <div class="rar-observation-label">02 · Điều tôi quan sát được</div>
+      <div class="rar-observation-text">Khi quan sát cách RAR Center đang truyền thông cho một hệ sinh thái sản phẩm và hoạt động ngày càng rộng, tôi nhận thấy RAR có rất nhiều nội dung có giá trị nhưng nhiều audience khác nhau đang sống chung trên một hệ thống kênh.</div>
+    </div>
+    <div class="rar-problem reveal">
+      <div class="rar-problem-label">03 · Bài toán tôi nhìn thấy</div>
+      <div>
+        <div class="anchor">“Đúng người” cần nhìn thấy “đúng giá trị” dành cho mình.</div>
+        <p class="lead">Khi hệ sinh thái tiếp tục mở rộng, bài toán truyền thông cần trả lời đúng:</p>
+        <div class="rar-questions"><div class="rar-question">Ai cần biết điều gì?</div><div class="rar-question">Nên tiếp cận họ ở đâu?</div><div class="rar-question">Nên kể bằng ngôn ngữ nào?</div><div class="rar-question">Và giá trị nào cần được nhìn thấy trước tiên?</div></div>
+        <div class="insight-close">Tính hệ thống trong truyền thông nên song hành với tính hệ thống của công nghệ.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 11B — DIRECTIONS -->
+<section class="section directions" id="rar-direction">
+  <div class="container">
+    <div class="section-header single reveal"><div><p class="eyebrow">MỘT SỐ HƯỚNG TÔI NHÌN THẤY</p></div></div>
+    <div class="direction-grid reveal">
+      <article class="direction"><div class="num">01</div><div><h3>Phân lớp công chúng rõ hơn</h3><p>Xác định các nhóm người dân, doanh nghiệp, đối tác, ngành nghề và cộng đồng công nghệ để tổ chức thông tin phù hợp với nhu cầu của từng nhóm.</p></div></article>
+      <article class="direction"><div class="num">02</div><div><h3>Làm rõ vai trò của từng kênh</h3><p>Website, Facebook, TikTok, các kênh cấp C06 và hệ sinh thái đối tác không nhất thiết phải kể cùng một câu chuyện theo cùng một cách.</p></div></article>
+      <article class="direction"><div class="num">03</div><div><h3>Đưa sản phẩm về gần use case thực tế</h3><p>Bắt đầu từ tình huống người dùng gặp trong đời sống hoặc vận hành, sau đó mới giải thích công nghệ phía sau.</p><p class="example">“Bay cùng VNeID” và “Chu Du” là một ví dụ đáng chú ý cho hướng tiếp cận này.</p></div></article>
+      <article class="direction"><div class="num">04</div><div><h3>Xây hệ thống nội dung dễ nhận diện và dễ tìm lại</h3><p>Khi số lượng giải pháp ngày càng lớn, việc tổ chức các tuyến nội dung, series và điểm truy cập thông tin rõ ràng có thể giúp công chúng hiểu hệ sinh thái RAR Center nhanh hơn.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 12 — CONTACT -->
+<footer class="contact" id="contact">
+  <div class="container">
+    <div class="contact-grid reveal">
+      <div><p class="eyebrow">KẾT NỐI</p><h2 class="h2">Trao đổi thêm về kinh nghiệm và góc nhìn truyền thông</h2><p class="contact-copy">Tôi mong có cơ hội trao đổi sâu hơn về những kinh nghiệm đã triển khai, cách tôi tiếp cận các bài toán truyền thông công nghệ và khả năng đóng góp nếu được đồng hành cùng RAR Center.</p><div class="btns"><!-- REPLACE WITH FINAL CV FILE --><a class="btn primary" href="#">TẢI CV</a><a class="btn" href="mailto:lyvc.cda@gmail.com">GỬI EMAIL</a></div></div>
+      <div class="contact-info"><h3>VŨ CẨM LY</h3><p>Truyền thông · Branding · PR &amp; Media</p><p><a href="tel:+84964581326">0964 581 326</a></p><p><a href="mailto:lyvc.cda@gmail.com">lyvc.cda@gmail.com</a></p><p>Hà Nội</p></div>
+    </div>
+    <div class="contact-signature reveal">“Nếu công nghệ phức tạp, truyền thông phải làm nó trở nên dễ hiểu, dễ tiếp cận và hữu ích trong đời sống.”</div>
+    <div class="footer-note">© VŨ CẨM LY · PORTFOLIO 2022–2026</div>
+  </div>
+</footer>
+</main>
+<script>
+const menuBtn = document.querySelector('.menu-btn');
+const nav = document.querySelector('.nav');
+menuBtn?.addEventListener('click', () => {
+  const open = nav.classList.toggle('open');
+  menuBtn.setAttribute('aria-expanded', String(open));
+});
+nav?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { nav.classList.remove('open'); menuBtn?.setAttribute('aria-expanded','false'); }));
+
+const revealEls = document.querySelectorAll('.reveal');
+if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const ro = new IntersectionObserver(entries => entries.forEach(entry => { if(entry.isIntersecting) { entry.target.classList.add('visible'); ro.unobserve(entry.target); } }), {threshold:.12});
+  revealEls.forEach(el => ro.observe(el));
+} else { revealEls.forEach(el => el.classList.add('visible')); }
+
+const sections = [...document.querySelectorAll('main section[id], footer[id]')];
+const navLinks = [...document.querySelectorAll('.nav a[href^="#"]')];
+const io = new IntersectionObserver(entries => {
+  const visible = entries.filter(e => e.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];
+  if(!visible) return;
+  navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + visible.target.id));
+}, {rootMargin:'-25% 0px -65% 0px', threshold:[0,.25,.5]});
+sections.forEach(s => io.observe(s));
+</script>
+</body>
+</html>
