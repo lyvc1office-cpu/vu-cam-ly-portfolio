@@ -5,7 +5,113 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Portfolio truyền thông công nghệ của Vũ Cẩm Ly — Branding, Content, PR & Media, Event, Integrated Communications.">
 <title>Vũ Cẩm Ly — Portfolio Truyền thông</title>
-<style>
+.contact-trigger{
+  font-family:inherit;
+  cursor:pointer;
+  background:transparent;
+}
+
+.contact-modal{
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+}
+
+.contact-modal.open{
+  display:flex;
+}
+
+.contact-modal-backdrop{
+  position:absolute;
+  inset:0;
+  background:rgba(15,26,43,.58);
+  backdrop-filter:blur(4px);
+}
+
+.contact-modal-card{
+  position:relative;
+  z-index:1;
+  width:min(100%,460px);
+  background:#fff;
+  padding:38px;
+  border:1px solid var(--border);
+  box-shadow:0 24px 70px rgba(23,38,60,.20);
+}
+
+.contact-modal-close{
+  position:absolute;
+  top:14px;
+  right:18px;
+  border:0;
+  background:none;
+  font-size:26px;
+  line-height:1;
+  color:var(--muted);
+  cursor:pointer;
+}
+
+.contact-modal-label{
+  margin:0 0 12px;
+  font-size:11px;
+  letter-spacing:.16em;
+  font-weight:800;
+  color:var(--accent);
+}
+
+.contact-modal-card h3{
+  margin:0 0 18px;
+  font-size:24px;
+  color:var(--navy);
+}
+
+.contact-phone{
+  display:inline-block;
+  font-size:34px;
+  line-height:1.1;
+  font-weight:800;
+  letter-spacing:-.03em;
+  color:var(--navy);
+}
+
+.contact-modal-note{
+  margin:16px 0 24px;
+  font-size:14px;
+  color:var(--muted);
+}
+
+.contact-modal-actions{
+  display:flex;
+  gap:10px;
+}
+
+.contact-copy,
+.contact-call{
+  min-height:44px;
+  padding:0 16px;
+  border:1px solid var(--navy);
+  font-family:inherit;
+  font-size:13px;
+  font-weight:750;
+  cursor:pointer;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.contact-copy{
+  background:#fff;
+  color:var(--navy);
+}
+
+.contact-call{
+  background:var(--navy);
+  color:#fff;
+}
+  <style>
 :root {
   --bg:#F7F7F5;
   --surface:#FFFFFF;
@@ -581,7 +687,7 @@ button,a{-webkit-tap-highlight-color:transparent}
       <a href="#rar-insight">Góc nhìn</a>
       <a href="#contact">Liên hệ</a>
       <!-- REPLACE WITH FINAL CV FILE -->
-     <a class="download" href="tel:0964581326">Liên hệ ngay</a>
+     <button class="download contact-trigger" type="button">Liên hệ ngay</button>
     </nav>
   </div>
 </header>
@@ -604,7 +710,7 @@ button,a{-webkit-tap-highlight-color:transparent}
       <div class="btns">
         <a class="btn primary" href="#projects">Xem dự án tiêu biểu ↓</a>
        <!-- CONTACT CTA -->
-        <a class="btn" href="tel:0964581326">Liên hệ ngay</a>
+      <button class="btn contact-trigger" type="button">Liên hệ ngay</button>
       </div>
     </div>
     <figure class="hero-photo reveal">
@@ -1019,6 +1125,65 @@ const io = new IntersectionObserver(entries => {
   navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + visible.target.id));
 }, {rootMargin:'-25% 0px -65% 0px', threshold:[0,.25,.5]});
 sections.forEach(s => io.observe(s));
+</script>
+<div class="contact-modal" id="contactModal" aria-hidden="true">
+  <div class="contact-modal-backdrop"></div>
+
+  <div class="contact-modal-card" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
+    <button class="contact-modal-close" type="button" aria-label="Đóng">×</button>
+
+    <p class="contact-modal-label">LIÊN HỆ TRỰC TIẾP</p>
+
+    <h3 id="contactModalTitle">Vũ Cẩm Ly</h3>
+
+    <a class="contact-phone" href="tel:0964581326">
+      0964 581 326
+    </a>
+
+    <p class="contact-modal-note">
+      Anh/Chị có thể gọi trực tiếp hoặc sao chép số điện thoại.
+    </p>
+
+    <div class="contact-modal-actions">
+      <button class="contact-copy" type="button">Sao chép số</button>
+      <a class="contact-call" href="tel:0964581326">Gọi ngay</a>
+    </div>
+  </div>
+</div>
+<script>
+  const contactModal = document.getElementById('contactModal');
+  const contactTriggers = document.querySelectorAll('.contact-trigger');
+  const contactClose = document.querySelector('.contact-modal-close');
+  const contactBackdrop = document.querySelector('.contact-modal-backdrop');
+  const copyButton = document.querySelector('.contact-copy');
+
+  contactTriggers.forEach(button => {
+    button.addEventListener('click', () => {
+      contactModal.classList.add('open');
+      contactModal.setAttribute('aria-hidden', 'false');
+    });
+  });
+
+  function closeContactModal() {
+    contactModal.classList.remove('open');
+    contactModal.setAttribute('aria-hidden', 'true');
+  }
+
+  contactClose.addEventListener('click', closeContactModal);
+  contactBackdrop.addEventListener('click', closeContactModal);
+
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') closeContactModal();
+  });
+
+  copyButton.addEventListener('click', async () => {
+    await navigator.clipboard.writeText('0964581326');
+    copyButton.textContent = 'Đã sao chép ✓';
+
+    setTimeout(() => {
+      copyButton.textContent = 'Sao chép số';
+    }, 1800);
+  });
 </script>
 </body>
 </html>
